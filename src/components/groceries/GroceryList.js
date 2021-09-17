@@ -1,19 +1,19 @@
+import React from 'react' ;
 import Grocery from './Grocery';
 
 
-const GroceryList = ({ groceries}) => {
+const GroceryList = ({ items, groceryClick}) => {
   return (
     <>
     {
-
-      groceries.map (grocery => 
-      < Grocery {...grocery} />
+      items.map (item =>
+      < Grocery
+      key={item.id} {...item}
+      groceryClick={groceryClick}
+      />
       )
     }
-
     </>
-   
   )
 }
-
 export default GroceryList;

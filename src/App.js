@@ -27,31 +27,32 @@ class App extends Component {
     const newGroceryItem = { id: this.getUniqId() , ...incomingGroceryItem }
     this.setState({groceries: [newGroceryItem,  ...groceries]})
   }
-
-  done = (id) => {
-    let updateComplete = this.state.groceries.map((n) => {
-      if (n.id !== id ) {
-        return n;
-      } 
-      return {...n, complete: !n.complete};
-    });
-    this.setState({
-      groceries: updateComplete,
-    });
+  handleClick = (id) => {
+    const { groceries } = this.state
+    this.setState ({
+      groceries: groceries.map(grocery => {
+        if (grocery.id === id ) {
+          return {
+          ...grocery,
+          complete: !grocery.complete
+          }
+        }
+        return grocery
+      })
+    })
   }
-
   render () {
     const { groceries } = this.state
     return  (
         <>
-  
           <GroceryForm addToList={this.addToList} />
-          <GroceryList groceries={groceries} 
-          done={this.done}/>
+          <GroceryList name="Grocery List" items={groceries}
+          groceryClick={this.handleClick}/>
         </>
     )
   }
 }
-
 export default App;
+
+
 
