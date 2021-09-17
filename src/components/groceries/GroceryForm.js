@@ -2,7 +2,7 @@ import { Component } from "react";
 
 class GroceryForm extends Component {
 
-  state = { item: '' , complete: false, price: 0.00 }
+  state = { item: '' , complete: false, price: '' }
 
   handleChange = (e) => {
     const { name, value } = e.target
