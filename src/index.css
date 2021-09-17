@@ -1,13 +1,38 @@
 body {
   margin: 0;
+  background-color: lightblue;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  align-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+div {
+  position: absolute;
+  left: 800px;
+  top: 200px;
+  align-items: center;
+  text-align: center;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
+
+button {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+input {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+}
+
+p {
+  padding: 35px;
 }
